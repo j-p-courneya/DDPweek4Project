@@ -1,0 +1,51 @@
+Manure App
+========================================================
+author: Jean-Paul Courneya
+date: 13 February 2018
+autosize: true
+
+Background
+========================================================
+
+We are talking crap. No crap, this is real big business. 
+
+- Solid waste management has major environmental implications
+- Sustainability programs are being implemented which require guidance driven by data informed decisions
+- Knowing real-time solid waste metrics based on use of routine reporting encourages best practice implementation and subsequent improvement and meeting of sustainability goals
+
+Importance and Impact
+========================================================
+
+#### Maryland department of Agriculture data shows there has been an increase in transport of manure. This graph shows that since 2005 transport of Cattle manure in Maryland is increasing. 
+
+```{r, fig2, fig.height = 3, fig.width = 8, fig.align = "center", echo=FALSE}
+##to run this code properly would require a local copy of the rds.
+manure <- readRDS("~/Documents/Coursera/DDP/DDPClassProjectWeek4/week4ProjectRepo/week4ShinyAppJPC/data/MD_ManureData2.rds")
+barplot(manure[,1], 
+        main = "Transport of Cattle Manure in \nMaryland", 
+        xlab = "Year", ylab = "Tons of Manure")
+```
+
+Application
+========================================================
+
+## On demand reporting can inform where opportunities to intervene exist.
+
+###### For example key decision makers and project analysts can see quickly when reporting practices have not been followed and trigger action. Like seen here where there is a gap in data collection. 
+```{r, fig3, fig.height = 3, fig.width = 8, fig.align = "center", echo=FALSE}
+barplot(manure[,3], 
+        main = "Transport of Hog Manure in \nMaryland", 
+        xlab = "Year", ylab = "Tons of Manure")
+```
+
+Conclusions
+====================================
+### What does the app look like?
+
+![alttext](AppImage2.png)
+
+***
+### Things to consider
+
+- Make an impact on sustainable practice with a data informed app.
+- Improve working efficiency by seeing problem areas
