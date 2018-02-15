@@ -39,4 +39,4 @@ manureMatrix <- as.matrix(manureDF[2:5])
 rownames(manureMatrix) <- manureDF$Year
 colnames(manureMatrix) <- colnames(manureDF[2:5])
 ##Save the data as Rds for use in the app
-saveRDS(craft, file = "../week4ProjectRepo/week4ShinyAppJPC/data/MD_manureData2.rds")
+saveRDS(manureMatrix, file = "../week4ProjectRepo/week4ShinyAppJPC/data/MD_manureData2.rds")
